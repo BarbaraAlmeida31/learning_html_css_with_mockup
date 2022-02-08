@@ -271,7 +271,6 @@ input:focus {
 
 .cards_position {
   display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
   padding: 0;
 }
@@ -328,9 +327,10 @@ input:focus {
 .activities_cards_position {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   max-height: 530px;
-  flex-direction: column;
   padding: 0;
+  
 }
 
 .activities_cards_column {
@@ -367,6 +367,13 @@ input:focus {
   font-size: 14px;
   padding: 20px 20px 20px 20px;
   margin: 0;
+}
+
+.cards_position_row {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
 }
 
 .activities_cards_row {
@@ -500,7 +507,7 @@ footer {
 
   #activities h3 {
     font-size: 16px;
-    margin-left: 5%;
+    margin-left: 35px;
   }
 
   .activities_cards_column {
@@ -508,23 +515,24 @@ footer {
     border-radius: 15px;
     box-shadow: 7px 7px 13px 0px rgba(50, 50, 50, 0.22);
     width: 300px;
-    height: 180px;
     transition: all 0.3s ease-out;
     margin: 15px 0px 15px 0px;
   }
 
-  .activities_cards_row {
-    margin-bottom: 0;
-  }
 
   .activities_cards_position {
     max-width: 768px;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
-    max-height: 800px;
+    justify-content: space-around;
+    max-height: 940px;
     margin-top: 0;
   }
+
+  .footer_content {
+    margin-top: 30px;
+  }
+
 }
 
 @media (max-width: 468px) {
@@ -664,22 +672,31 @@ footer {
     width: 90%;
   }
 
+  #activities {
+    margin-bottom: 30px;
+  }
+
   #activities h3 {
-    margin-left: 20px;
+    margin-left: 30px;
   }
 
   .activities_cards_column {
     background-color: white;
     border-radius: 15px;
     box-shadow: 7px 7px 13px 0px rgba(50, 50, 50, 0.22);
-    width: 90%;
+    width: 85%;
     height: 200px;
     transition: all 0.3s ease-out;
     margin: 15px 0px 15px 0px;
   }
 
+  .cards_position_row {
+    align-items: center;
+    width: 100%;
+  }
+
   .activities_cards_row {
-    width: 90%;
+    width: 85%;
     height: 200px;
     margin-bottom: 15px;
   }
@@ -689,9 +706,10 @@ footer {
     max-width: 768px;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    justify-content: space-around;
     max-height: 2000px;
   }
+
   .footer_content {
     display: flex;
     flex-direction: column;
